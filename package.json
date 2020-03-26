@@ -1,0 +1,34 @@
+{
+  "name": "joshuamorris_com",
+  "version": "1.0.0",
+  "description": "joshuamorris.com website",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "html5-boilerplate": "^7.3.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config webpack.dev.js --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuamorris3/joshuamorris_com.git"
+  },
+  "keywords": [
+    "static"
+  ],
+  "author": "Joshua Morris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuamorris3/joshuamorris_com/issues"
+  },
+  "homepage": "https://github.com/joshuamorris3/joshuamorris_com#readme"
+}
