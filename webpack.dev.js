@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 
@@ -12,6 +13,32 @@ module.exports = {
     port: 8080
   },
 
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
+      },
+      {
+        loader: "webpack-modernizr-loader",
+        test: /\.modernizrrc\.js$/
+        // Uncomment this when you use `JSON` format for configuration
+        // type: 'javascript/auto'
+      }
+    ]
+  },
+
   // https://webpack.js.org/concepts/plugins/
   plugins: [
     new HtmlWebpackPlugin({
@@ -19,6 +46,10 @@ module.exports = {
       inject: true,
       chunks: ['index'],
       filename: 'index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     })
   ]
 };
