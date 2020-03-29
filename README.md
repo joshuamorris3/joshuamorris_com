@@ -1,2 +1,2 @@
 # joshuamorris_com
-joshuamorris.com
+Personal website of Joshua Morris
