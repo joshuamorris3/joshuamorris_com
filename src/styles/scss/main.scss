@@ -1,0 +1,18 @@
+@use "@material/card/mdc-card";
+
+body {
+  background: rgba(0,0,0,.05);
+}
+
+.social-icons {
+  font-size: 24px;
+}
+
+ul.social-icons {
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.social-icons li {
+  display: inline;
+}
