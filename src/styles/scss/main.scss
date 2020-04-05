@@ -1,18 +1,39 @@
 @use "@material/card/mdc-card";
+@import "@material/layout-grid/mdc-layout-grid";
 
-body {
-  background: rgba(0,0,0,.05);
+html, body {
+  background-color: #f9f9f9;
+  height: 100%;
 }
 
-.social-icons {
-  font-size: 24px;
+main.container {
+  display: flex;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
 }
 
-ul.social-icons {
-  list-style: none;
+main.container section.content h1 {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 7.35rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: -0.1rem;
+  color: #21211f;
+  padding: 0;
 }
 
-/* Display list items side by side */
-ul.social-icons li {
-  display: inline;
+footer {
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  font-size: 20px;
+  color: #21211f;
+  padding: 0 0.5rem;
 }
