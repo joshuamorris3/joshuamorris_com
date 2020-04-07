@@ -6,6 +6,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const buildPath = path.resolve(__dirname, 'dist');
 const autoprefixer = require('autoprefixer');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
 
@@ -63,6 +64,24 @@ module.exports = {
         test: /\.modernizrrc\.js$/
         // Uncomment this when you use `JSON` format for configuration
         // type: 'javascript/auto'
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'images/',
+          publicPath: 'images/'
+        }
+      },
+      {
+        test: /\.(webmanifest|ico)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: '.',
+          publicPath: '.'
+        }
       }
     ]
   },
@@ -82,6 +101,7 @@ module.exports = {
    //     chunks: ['about'],
    //     filename: 'about.html'
    // }),
+    new FaviconsWebpackPlugin('./src/img/icon.png'),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
       chunkFilename: "[id].[contenthash].css"

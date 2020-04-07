@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require('autoprefixer');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
 
@@ -62,6 +63,7 @@ module.exports = {
       chunks: ['index'],
       filename: 'index.html'
     }),
+    new FaviconsWebpackPlugin('./src/img/icon.png'),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
