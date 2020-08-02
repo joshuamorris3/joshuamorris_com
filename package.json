@@ -9,7 +9,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "material-components-web": "^5.1.0",
     "normalize.css": "^8.0.1"
   },
@@ -24,7 +24,7 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.0.4",
     "html5-boilerplate": "^7.3.0",
-    "http-server": "^0.12.1",
+    "http-server": "^0.12.3",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
@@ -34,7 +34,7 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
+    "webpack-dev-server": "^3.11.0",
     "webpack-modernizr-loader": "^5.0.0"
   },
   "scripts": {
