@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const buildPath = path.resolve(__dirname, 'dist');
-const autoprefixer = require('autoprefixer');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
@@ -43,12 +42,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [autoprefixer()]
-            }
-          },
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
