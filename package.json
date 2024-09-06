@@ -9,7 +9,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "favicons": "^6.2.2",
+    "favicons": "^7.1.5",
     "jquery": "^3.6.0",
     "material-components-web": "^11.0.0",
     "normalize.css": "^8.0.1"
