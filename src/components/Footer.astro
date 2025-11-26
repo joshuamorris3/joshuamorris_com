@@ -1,35 +1,50 @@
 ---
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import '../scripts/fontawesome.js';
 ---
 
-<footer class="absolute bottom-[35px] w-full text-center">
+<footer class="fixed bottom-[35px] left-0 right-0 w-full text-center z-10">
   <a
     href="https://www.linkedin.com/in/joshuamorris2"
     title="Joshua Morris on LinkedIn"
     target="_blank"
     rel="noopener noreferrer"
-    class="text-xl text-[#21211f] px-2 no-underline hover:opacity-80"
+    class="text-xl text-[#21211f] px-2 no-underline hover:opacity-80 inline-block"
+    aria-label="LinkedIn"
   >
-    <i class="fab fa-linkedin-in"></i>
+    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
   </a>
   <a
     href="https://github.com/joshuamorris3"
     target="_blank"
     rel="noopener noreferrer"
     title="Joshua Morris on GitHub"
-    class="text-xl text-[#21211f] px-2 no-underline hover:opacity-80"
+    class="text-xl text-[#21211f] px-2 no-underline hover:opacity-80 inline-block"
+    aria-label="GitHub"
   >
-    <i class="fab fa-github"></i>
-  </a>
-  <a
-    href="https://keybase.io/joshuamorris"
-    target="_blank"
-    rel="noopener noreferrer"
-    title="Joshua Morris on Keybase"
-    class="text-xl text-[#21211f] px-2 no-underline hover:opacity-80"
-  >
-    <i class="fab fa-keybase"></i>
+    <i class="fab fa-github" aria-hidden="true"></i>
   </a>
 </footer>
+
+<script>
+  import { library, dom } from "@fortawesome/fontawesome-svg-core";
+  import {
+    faLinkedinIn,
+    faGithub,
+    faKeybase,
+  } from "@fortawesome/free-brands-svg-icons";
+
+  library.add(faLinkedinIn, faGithub, faKeybase);
+  
+  // Convert <i> tags to SVG when DOM is ready
+  if (typeof window !== "undefined") {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => {
+        dom.i2svg();
+      });
+    } else {
+      // DOM already loaded
+      dom.i2svg();
+    }
+  }
+</script>
 
