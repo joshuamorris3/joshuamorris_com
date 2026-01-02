@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && echo '_worker.js\n_routes.json' > dist/.assetsignore",
     "preview": "astro preview",
     "astro": "astro",
     "wrangler:dev": "npm run build && wrangler dev --ip 0.0.0.0",
