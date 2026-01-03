@@ -13,7 +13,7 @@
     "wrangler:deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^11.0.0",
+    "@astrojs/cloudflare": "^12.6.11",
     "@astrojs/tailwind": "^5.1.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
